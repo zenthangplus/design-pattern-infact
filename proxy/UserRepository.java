@@ -2,5 +2,5 @@ package proxy;
 
 public interface UserRepository {
 
-    UserEntity getUser(int id);
+    User getUser(int id);
 }

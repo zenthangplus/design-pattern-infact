@@ -8,7 +8,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public UserEntity getUser(int id) {
+    public User getUser(int id) {
         return userRepository.getUser(id);
     }
 }

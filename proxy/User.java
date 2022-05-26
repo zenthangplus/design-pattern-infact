@@ -1,10 +1,10 @@
 package proxy;
 
-public class UserEntity {
+public class User {
     private final int id;
     private final String name;
 
-    public UserEntity(int id, String name) {
+    public User(int id, String name) {
         this.id = id;
         this.name = name;
     }

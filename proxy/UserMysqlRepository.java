@@ -1,8 +1,8 @@
 package proxy;
 
 class UserMysqlRepository implements UserRepository {
-    public UserEntity getUser(int id) {
+    public User getUser(int id) {
         // Get user from db
-        return new UserEntity(id, "A random name");
+        return new User(id, "A random name");
     }
 }
