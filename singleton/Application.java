@@ -6,5 +6,6 @@ public class Application {
         // You can use HttpClient.getInstance() everywhere to get HttpClient instance
         HttpClient.getInstance().get("http://example/path1");
         HttpClient.getInstance().get("http://example/path2");
+        HttpClient.getInstance().get("http://example/path3");
     }
 }

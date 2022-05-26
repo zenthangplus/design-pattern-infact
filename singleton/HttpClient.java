@@ -11,8 +11,10 @@ public class HttpClient {
 
     public static HttpClient getInstance() {
         if (instance != null) {
+            System.out.println("HttpClient instance reused");
             return instance;
         }
+        System.out.println("HttpClient instance created");
         instance = new HttpClient();
         return instance;
     }
