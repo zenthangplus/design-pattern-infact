@@ -1,3 +1,5 @@
+package proxy;
+
 public class UserEntity {
     private final int id;
     private final String name;
