@@ -12,8 +12,12 @@ public class Application {
         PoolResolver poolResolver = new PoolResolver(List.of(nftPoolStrategy, bondPoolStrategy));
 
         // Now you can use strategy's key to resolve its implementation
-        PoolStrategy poolStrategy = poolResolver.resolve("BOND");
-        poolStrategy.deposit("TEST_ASSET");
-        poolStrategy.withdraw("TEST_ASSET");
+        PoolStrategy poolStrategy1 = poolResolver.resolve("BOND");
+        poolStrategy1.deposit("TEST_ASSET_1");
+        poolStrategy1.withdraw("TEST_ASSET_1");
+
+        PoolStrategy poolStrategy2 = poolResolver.resolve("NFT");
+        poolStrategy2.deposit("TEST_ASSET_2");
+        poolStrategy2.withdraw("TEST_ASSET_2");
     }
 }
