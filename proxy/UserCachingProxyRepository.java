@@ -15,7 +15,9 @@ public class UserCachingProxyRepository implements UserRepository {
     @Override
     public User getUser(int id) {
         if (inMemUserStorage.containsKey(id)) {
-            return inMemUserStorage.get(id);
+            User user = inMemUserStorage.get(id);
+            System.out.printf("Get user %d from cache\n", user.getId());
+            return user;
         }
         User user = mysqlRepository.getUser(id);
         inMemUserStorage.put(id, user);

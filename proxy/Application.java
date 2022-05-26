@@ -11,6 +11,7 @@ public class Application {
         // When you want to enable caching
         UserCachingProxyRepository userCachingProxyRepository = new UserCachingProxyRepository(userMysqlRepository);
         UserService userService2 = new UserService(userCachingProxyRepository);
-        userService2.getUser(1);
+        userService2.getUser(2);// First call, get from db
+        userService2.getUser(2);// Seconds call, get from cache
     }
 }
