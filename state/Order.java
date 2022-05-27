@@ -10,7 +10,7 @@ public class Order {
 
     public Order() {
         // Initial state
-        this.state = new DraftState(this);
+        this.setState(new DraftState(this));
     }
 
     public State getState() {
@@ -18,8 +18,12 @@ public class Order {
     }
 
     public void setState(State state) {
-        System.out.printf("Order state change from %s to %s\n",
-                this.state.getClass().getSimpleName(), state.getClass().getSimpleName());
+        if (this.state == null) {
+            System.out.printf("Order state initialed from %s\n", state.getClass().getSimpleName());
+        } else {
+            System.out.printf("Order state change from %s to %s\n",
+                    this.state.getClass().getSimpleName(), state.getClass().getSimpleName());
+        }
         this.state = state;
     }
 

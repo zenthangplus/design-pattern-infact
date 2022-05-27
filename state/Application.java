@@ -8,15 +8,15 @@ public class Application {
         System.out.println("=====================================");
         Order order1 = new Order();
 
-        System.out.println("+ Test approve an empty order +");
+        System.out.println("\n+ Test approve an empty order +");
         order1.getState().approve();
 
-        System.out.println("+ Test deliver a drafting order +");
+        System.out.println("\n+ Test deliver a drafting order +");
         order1.setItemId("ID1");
         order1.setQuantity(1);
         order1.getState().deliver();
 
-        System.out.println("+ Test cancel a drafting order +");
+        System.out.println("\n+ Test cancel a drafting order +");
         order1.getState().cancel();
 
         System.out.println();
@@ -27,13 +27,13 @@ public class Application {
         order2.setItemId("ID2");
         order2.setQuantity(1);
 
-        System.out.println("+ Test approve a fully order +");
+        System.out.println("\n+ Test approve a fully order +");
         order2.getState().approve();
 
-        System.out.println("+ Test deliver an approved order +");
+        System.out.println("\n+ Test deliver an approved order +");
         order2.getState().deliver();
 
-        System.out.println("+ Test cancel a done order +");
+        System.out.println("\n+ Test cancel a done order +");
         order2.getState().cancel();
     }
 }
