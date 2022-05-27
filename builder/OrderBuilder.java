@@ -22,6 +22,11 @@ public class OrderBuilder {
         return this;
     }
 
+    public OrderBuilder increaseQuantity(float quantity) {
+        this.order.setQuantity(this.order.getQuantity() + quantity);
+        return this;
+    }
+
     public OrderBuilder leverage(int leverage) {
         this.order.setLeverage(leverage);
         return this;
