@@ -4,7 +4,7 @@ public interface PoolStrategy {
 
     String type();
 
-    boolean deposit(String assetAddress);
+    void stake(String assetAddress);
 
-    boolean withdraw(String assetAddress);
+    void unstake(String assetAddress);
 }

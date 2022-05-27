@@ -13,11 +13,11 @@ public class Application {
 
         // Now you can use strategy's key to resolve its implementation
         PoolStrategy poolStrategy1 = poolResolver.resolve("BOND");
-        poolStrategy1.deposit("TEST_ASSET_1");
-        poolStrategy1.withdraw("TEST_ASSET_1");
+        poolStrategy1.stake("TEST_ASSET_1");
+        poolStrategy1.unstake("TEST_ASSET_1");
 
         PoolStrategy poolStrategy2 = poolResolver.resolve("NFT");
-        poolStrategy2.deposit("TEST_ASSET_2");
-        poolStrategy2.withdraw("TEST_ASSET_2");
+        poolStrategy2.stake("TEST_ASSET_2");
+        poolStrategy2.unstake("TEST_ASSET_2");
     }
 }
